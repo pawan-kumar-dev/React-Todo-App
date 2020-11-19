@@ -1,0 +1,61 @@
+body {
+     width: 100%;
+     text-align: center;
+     background-image: linear-gradient(
+          90deg,
+          rgb(233, 66, 66),
+          rgb(231, 165, 42),
+          rgb(233, 233, 61),
+          rgb(59, 59, 233)
+     );
+     background-size: 300%;
+     animation: load 1.5s linear infinite;
+}
+@keyframes load {
+     0% {
+          background-position: 100% 50%;
+     }
+     100% {
+          background-position: 0 50%;
+     }
+}
+.App {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.TodoApp {
+     margin: 0.6rem 0;
+     max-width: 50%;
+     border: 2px dashed red;
+     padding: 1.2rem;
+     word-wrap: wrap;
+}
+.loading {
+     width: 50px;
+     height: 50px;
+     margin: 20% auto;
+     border: 10px solid rgb(97, 93, 93);
+     border-top-color: transparent;
+     border-radius: 50%;
+     animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+     from {
+          transform: rotate(0deg);
+     }
+     to {
+          transform: rotate(360deg);
+     }
+}
+@media (max-width: 500px) {
+     .App {
+          width: 100%;
+     }
+     .TodoApp {
+          margin: 0.6rem 0;
+          max-width: 98%;
+          border: 2px dashed transparent;
+          padding: 0.3rem;
+     }
+}
